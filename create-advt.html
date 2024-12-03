@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="utf-8">
+        <title>Сайт оголошеннь</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="new-advt.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="add.js" defer></script>
+    </head>
+    <body style="overflow: hidden;">
+        <div class="bg"> </div>
+
+        <div id="confirm-create" class="div-btn unselectable">Створити оголошення</div>
+        
+        <div class="advt" style="height: 100vh;">
+            <label for="pic" ><img id="preview" style="height: 100%;" src="image.png"></label>
+            <input id="pic" name="pic" type="file" accept="image/*" style="display: none;">
+            <div class="advt-text">
+                <div class="advt-header">
+                    <input id="caption" class="advt-caption create-mode" placeholder="Введіть">
+                    <input id="cost" type="number" min="0" class="advt-price create-mode" placeholder="Введіть ціну">
+                </div>
+                <div class="dropdown" style="margin-bottom: 1em; width: 100%; margin-left: 0 !important;">
+                    <input id="cur-category" class="create-mode" style="width: calc(100% - 0.8em); color: #fff;">
+                    <div id="dc" class="dropdown-content">
+                        
+                    </div>
+                </div>
+                <textarea id="description" class="advt-description create-mode" placeholder="Опишіть що ви хочете продати"></textarea>
+            </div>
+        </div>
+    </body>
+</html>
