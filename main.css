@@ -3,6 +3,13 @@
     --butt_alt_bg: rgba(29, 192, 113, 0.473);
     --main_bg: rgb(111, 29, 192);
     --alt_bg: rgb(48, 22, 141);
+
+    /* --shift: 50%;
+
+    --swap-z-index: -1;
+
+    --form-clickable: all; */
+
     color: azure;
     margin: 0;
     padding: 0;
@@ -36,14 +43,34 @@ input {
     user-select: none;
 }
 
-#form{
+#log-form{
+    pointer-events: var(--form-clickable);
     width: 15%;
     background-color: var(--main_bg);
     padding: 1em;
     position: absolute;
-    left: 50%;
+    left: var(--shift);
     top: 50%;
     transform: translate(-50%, -50%);
+    z-index: calc(-1 * var(--swap-z-index));
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.27);
+    box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.27);
+}
+
+#reg-form{
+    pointer-events: var(--form-clickable);
+    width: 15%;
+    background-color: rgb(47, 117, 0);
+    padding: 1em;
+    position: absolute;
+    right: var(--shift);
+    top: 50%;
+    transform: translate(50%, -50%);
+    z-index: calc(1 * var(--swap-z-index));
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.27);
+    box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.27);
 }
 
 input {
@@ -75,6 +102,13 @@ input {
 }
 
 #login-button {
+    background-color:var(--butt_bg);
+    padding: 0.2em;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+#registr-button {
     background-color:var(--butt_bg);
     padding: 0.2em;
     text-align: center;
@@ -127,6 +161,14 @@ input {
     height: 35vh;
 
     background-color: rgba(22, 56, 78, 0.486);
+}
+
+.advt-img {
+    height: 100%;
+    width: 35vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .advt-text {

@@ -17,7 +17,7 @@ $("#confirm-create").on("click", () => {
         processData: false, // Отключаем преобразование данных в строку
         contentType: false, // Отключаем установку заголовка Content-Type
         success: (response) => {
-            if(response === "succes") window.location.href = "."
+            if(response === "success") window.location.href = "."
         },
         error: (error) => {
             console.error("Error:", error);

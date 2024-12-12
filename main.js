@@ -24,7 +24,7 @@ function addContent(search){
     list.innerHTML = ""
     advtData.forEach(el => {
         var template = `<div class="advt">
-                <img style="height: 100%;" src="uploads/${el[2]}">
+                <div class="advt-img" style="background-image: url('uploads/${el[2]}')"> </div>
                 <div class="advt-text">
                     <div class="advt-header">
                         <p class="advt-caption">${el[3]}</p>
