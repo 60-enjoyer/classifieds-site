@@ -23,7 +23,7 @@ function addContent(search){
     var list = document.getElementById("advt-aera")
     list.innerHTML = ""
     advtData.forEach(el => {
-        var template = `<div class="advt">
+        var template = `<div class="advt-chrome-bulshit">
                 <div class="advt-img" style="background-image: url('uploads/${el[2]}')"> </div>
                 <div class="advt-text">
                     <div class="advt-header">
